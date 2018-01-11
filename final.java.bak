@@ -1,0 +1,22 @@
+class Final
+{
+	  int x,y;
+	Final()
+	{
+		 x=10;
+		 y=10;
+	}
+	void show()
+	{
+		 System.out.println(x);
+		 	 System.out.println(y);
+	}
+public static void main(String[] x)
+	{
+	     Final f1=new Final(),f2=new Final();
+		 System.out.prinln("f1.show");
+		 f1.show();
+		 System.out.prinln("f2.show");
+                 f2.show();
+	}
+}
