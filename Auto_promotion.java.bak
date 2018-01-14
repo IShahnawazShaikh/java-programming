@@ -1,0 +1,25 @@
+class Auto_promotion
+{
+	void m()
+	{
+		System.out.println("no arg");
+	}
+	void m(int x)
+	{
+		System.out.println("int-arg");
+	}
+	void m(float f)
+	{
+		System.out.println("float-arg");
+	}
+	public static void main(String[] x)
+	{
+		Auto_promotion a=new Auto_promotion();
+		a.m();
+		a.m(2);
+		a.m(10l);
+		a.m(10f);
+		a.m('a');
+	    a.m(10.4);
+	}
+}
