@@ -1,0 +1,15 @@
+import java.awt.*;
+class FrameAssociation 
+{
+	Frame F;
+	  FrameAssociation(String s)
+	   {
+		    F=new Frame(s);
+			F.setSize(700,400);
+			F.setVisible(true);
+	   }
+	public static void main(String[] args) 
+	{
+	    new FrameAssociation("My Frame");
+	}
+}
