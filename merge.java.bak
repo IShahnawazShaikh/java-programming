@@ -1,0 +1,79 @@
+import java.io.*;
+import java.io.PrintWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.lang.String;
+class merge
+{
+	public static void main(String[] arg)throws IOException
+	{
+		File f1=new File("A.txt");
+		File f2=new File("B.txt");
+		File f3=new File("C.txt");
+	    f1.createNewFile();
+		f2.createNewFile();
+		f3.createNewFile();
+		PrintWriter pw=new PrintWriter(f1);
+		pw.println("Shahnawaz");
+		pw.println("AAAAA");
+		pw.println("BBBBB");
+		pw.println("CCCCC");
+		pw.println("prolog");
+		pw.flush();
+		pw.close();
+		PrintWriter pw1=new PrintWriter(f2);
+		pw1.println("prolog");
+		pw1.println("11111");
+		pw1.println("AAAAA");
+		pw1.println("33333");
+		pw1.flush();
+		pw1.close();
+		PrintWriter pw3=new PrintWriter(f3);
+		String line1[]=new String[10];
+		String line2[]=new String[10];
+		FileReader fr1=new FileReader(f1);
+		BufferedReader BR1=new BufferedReader(fr1);
+		FileReader fr2=new FileReader(f2);
+		BufferedReader BR2=new BufferedReader(fr2);
+		 String str=BR1.readLine();
+		int in=0,count=0,j,inc=0,k;
+		while(str!=null)
+		{
+			 line1[count]=str;
+			  ++count;
+			 str=BR1.readLine();
+	    }
+		str=BR2.readLine();
+		while(str!=null)
+		{
+			line2[inc]=str;
+			++inc;
+			str=BR2.readLine();
+		}
+		boolean b;
+    for(j=0;j<count;j++)
+		{
+		    for(k=0;k<inc;k++)
+			{
+			      b=line1[j].equals(line2[k]);
+				if(b==true)
+				{
+					++in;
+				}
+		    }
+		  if(in==0)
+			{
+				pw3.println(line1[j]);
+			}
+			in=0;
+			if(j==count-1)
+			{
+				for(i=0;i<inc;i++)
+				{
+					pw3.println(line2[i]);
+				}
+			}
+		}
+		pw3.close();
+	}
+}
