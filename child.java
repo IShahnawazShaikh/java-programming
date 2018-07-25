@@ -1,23 +1,29 @@
 class parent
 {
-	int x,y;
+	   parent(){
+          System.out.println("In Parent Constructor");
+	 }
+	  {
+	    System.out.println("parent init block");
+	  }
+	  static{
+       System.out.println("parent stati init blok");
+  }
 }
 class child extends parent
 {
-	void set(int p,int q)
-	{
-		this.x=p;
-		this.y=q;
-	  }
-	  	void show()
-	{
-        System.out.println("Area of Rectangle ="+x*y);
+	    child(){
+		 System.out.println("child constructor");
 	}
+ static{
+       System.out.println("chil stati init blok");
+  }
+	  {
+	       System.out.println("child init block");
+	  }
+	    public static void main(String []a){
+              new child();
 
-public static void main(String[] x)
-       {
-	       child c=new child();
-		   c.set(20,30);
-		   c.show();
-      }
+			  new child();
+		}
 }
