@@ -37,6 +37,7 @@ class synchronizedDeadlock1 extends Thread{
     	  System.out.println("main thread calling d1()");
     	  a.d1(b);
     }
+    public void run(){
        System.out.println("child thread calling d1()");
        b.d2(a);
 
