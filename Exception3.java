@@ -8,18 +8,11 @@ class Exception3
 		    try{
 				     System.out.println(10/0);
 			    }
-				catch(ArithmeticException e){
-					  System.out.println("Arithmetic exception");
-				}
-				catch(NullPointerException n){
-					System.out.println("Null pointer exception");
-				}
-				catch(IllegalArgumentException i)
-		        {
-					   System.out.println("Illegal argument exception");
+				catch(ArithmeticException e |NullPointerException e |IllegalArgumentException e|){
+					  System.out.println("Exception= "+e);
 				}
 				catch(Exception e)
-		        {
+		                    {
 					   System.out.println("Exception");
 				}
 	   }
