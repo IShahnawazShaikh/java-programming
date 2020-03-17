@@ -14,6 +14,7 @@ class abstraction extends abstraction2
 		  int area;
 		  area=length*breadth;
 		  System.out.println("Area of rectangle="+area);
+		  perimeter();
 	}
 	void perimeter()
 	{
@@ -25,7 +26,6 @@ class abstraction extends abstraction2
 	{
 		abstraction abs=new abstraction();
 		abs.area();
-		abs.perimeter();
 	}
 }
 	
