@@ -1,10 +1,10 @@
 import java.util.Enumeration;
-import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.Iterator;
 
 class thread extends Thread{
-	 ArrayList v;
-	 thread(ArrayList v){
+	 CopyOnWriteArrayList v;
+	 thread(CopyOnWriteArrayList v){
 	 	 this.v=v;
 	 }
 	 public void run(){
@@ -22,7 +22,7 @@ class thread extends Thread{
 class cursorDemo2{
 
    public static void main(String[] args)throws InterruptedException {
-   	 ArrayList v=new ArrayList();
+   	 CopyOnWriteArrayList v=new CopyOnWriteArrayList();
    	 for(int i=1;i<=5;i++){
           v.add(i);
    	 }
